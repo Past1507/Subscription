@@ -17,20 +17,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-
+    EditText textUser;
+    EditText textMail;
 
     public void clickOnBtnOk (View btnOk) {
-        EditText textUser = (EditText)findViewById(R.id.user);
+        textUser = (EditText)findViewById(R.id.user);
         String userName = textUser.getText().toString();
-        EditText textMail = (EditText)findViewById(R.id.mail);
+        textMail = (EditText)findViewById(R.id.mail);
         String mailTitle = textMail.getText().toString();
         Toast.makeText(this, getString(R.string.ClickOnOk)+" "+userName+" "+getString(R.string.ClickOnOk2)+" "+mailTitle, Toast.LENGTH_LONG).show();
     }
 
     public void clickOnBtnClear (View btnOk) {
-    EditText textUser = (EditText)findViewById(R.id.user);
+        textUser = (EditText)findViewById(R.id.user);
         textUser.setText(null);
-    EditText textMail = (EditText)findViewById(R.id.mail);
+        textMail = (EditText)findViewById(R.id.mail);
         textMail.setText(null);
     }
 }
