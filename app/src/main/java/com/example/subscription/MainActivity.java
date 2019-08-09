@@ -11,27 +11,29 @@ import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
 
+    EditText textUser;
+    EditText textMail;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        textUser= (EditText)findViewById(R.id.user);
+        textMail= (EditText)findViewById(R.id.mail);
     }
 
-    EditText textUser;
-    EditText textMail;
-
     public void clickOnBtnOk (View btnOk) {
-        textUser = (EditText)findViewById(R.id.user);
+
         String userName = textUser.getText().toString();
-        textMail = (EditText)findViewById(R.id.mail);
+
         String mailTitle = textMail.getText().toString();
         Toast.makeText(this, getString(R.string.ClickOnOk)+" "+userName+" "+getString(R.string.ClickOnOk2)+" "+mailTitle, Toast.LENGTH_LONG).show();
     }
 
     public void clickOnBtnClear (View btnOk) {
-        textUser = (EditText)findViewById(R.id.user);
+
         textUser.setText(null);
-        textMail = (EditText)findViewById(R.id.mail);
+
         textMail.setText(null);
     }
 }
