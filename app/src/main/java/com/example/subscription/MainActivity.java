@@ -10,9 +10,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText inputUserEdText;
-    EditText inputEmailEdText;
-    TextView resultText;
+    private EditText inputUserEdText;
+    private EditText inputEmailEdText;
+    private TextView resultText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +24,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickOnBtnOk (View btnOk) {
-
         String userName = inputUserEdText.getText().toString();
         String mailTitle = inputEmailEdText.getText().toString();
-        resultText.setText(getString(R.string.ClickOnOk)+" "+userName+" "+getString(R.string.ClickOnOk2)+" "+mailTitle);
+        resultText.setText(getString(R.string.resultText, userName, mailTitle));
     }
 
     public void clickOnBtnClear (View btnOk) {

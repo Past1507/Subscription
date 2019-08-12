@@ -8,6 +8,5 @@
 
     <string name="btnClear">Очистить</string>
 
-    <string name="ClickOnOk">Подписка на рассылку успешно оформлена для пользователя </string>
-    <string name="ClickOnOk2"> на электронный адрес </string>
+    <string name="resultText">Подписка на рассылку успешно оформлена для пользователя %1$s на электронный адрес %2$s</string>
 </resources>
